@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace - ReStore</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/market.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="marketplace-header">
+          <div class="content">
+            <h1>Marketplace</h1>
+            <p>Browse thousands of certified pre-owned electronics.</p>
+          </div>
+          <img
+            src="imgs/marketplace/marketplace.gif"
+            alt="market"
+          />
+        </div>
+        <div class="marketplace-controls">
+          <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Search products..."
+              id="searchProduct"
+            />
+          </div>
+
+          <div class="premium-filter-bar">
+            <div class="filter-box">
+              <label for="filter-condition">Condition</label>
+              <select id="filter-condition">
+                <option value="all">All Conditions</option>
+                <option value="refurbished">Refurbished</option>
+                <option value="used">Used</option>
+              </select>
+            </div>
+
+            <div class="filter-box">
+              <label for="filter-category">Category</label>
+              <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="phones">Smartphones</option>
+                <option value="laptops">Laptops</option>
+                <option value="tablets">Tablets</option>
+              </select>
+            </div>
+
+            <div class="filter-box price-range-box">
+              <label>Price Range</label>
+              <div class="price-inputs">
+                <input type="number" id="price-min" placeholder="Min" min="0" />
+                <span class="range-divider">-</span>
+                <input type="number" id="price-max" placeholder="Max" min="0" />
+              </div>
+            </div>
+
+            <div class="filter-box">
+              <label for="sort-price">Sort By</label>
+              <select id="sort-price">
+                <option value="newest">Newest</option>
+                <option value="lowest">Price: Lowest</option>
+                <option value="highest">Price: Highest</option>
+              </select>
+            </div>
+
+            <div class="filter-actions">
+              <button type="button" id="btn-apply-filters" class="btn-apply">
+                Apply Filters
+              </button>
+              <button type="button" id="btn-reset-filters" class="btn-reset">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card" data-id="1" data-category="phones">
+            <a href="product-details.html" class="product-link">
+              <div class="product-image">
+                <img src="imgs/hompage/repair.png" alt="Product" />
+              </div>
+              <div class="product-info">
+                <span class="condition">Refurbished - Excellent</span>
+                <h3>iPhone 13 Pro - 128GB</h3>
+                <div class="price">$599</div>
+              </div>
+            </a>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <!-- add a product -->
+      </div>
+
+    </main>
+    <script src="js/nav.js"></script>
+    <script src="js/market.js"></script>
+  </body>
+</html>
